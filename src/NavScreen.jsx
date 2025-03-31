@@ -7,7 +7,7 @@ function NavScreen() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen p-4">
-      <h1 className="text-xl font-bold mb-4">Navigation Screen</h1>
+      <h1 className="text-xl font-bold mb-4">Cases</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
         {cases.map((caseName, index) => (
           <button

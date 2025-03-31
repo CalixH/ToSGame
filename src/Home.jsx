@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./Home.css";
 
 function Home() {
-  const [count, setCount] = useState(0);
   const navigate = useNavigate();
 
   return (
@@ -18,17 +16,15 @@ function Home() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <h1>Terms of Service Lawyer Simulator 5000</h1>
+      <div className="card flex flex-col items-center gap-4">
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded"
           onClick={() => navigate("/nav-screen")}
         >
           Start
         </button>
+        <button onClick={() => navigate(`/case/tutorial`)}>Tutorial</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

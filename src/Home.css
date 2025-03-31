@@ -35,6 +35,17 @@
 
 .card {
   padding: 2em;
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center; /* Centers the buttons */
+  gap: 1rem; /* Adds spacing between elements */
+}
+
+.card button {
+  width: 25vw; /* Makes buttons 1/4 of the viewport width */
+  max-width: 300px; /* Prevents them from becoming too large on wide screens */
+  padding: 1rem; /* Adds some padding for better appearance */
+  font-size: 1.2rem; /* Makes text more readable */
 }
 
 .read-the-docs {
