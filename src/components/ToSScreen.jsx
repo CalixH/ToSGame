@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // format of case{}tos.txt
 // lines are to be \n separated
@@ -18,7 +18,11 @@ function ToSScreen({ tosText, setWin }) {
       isCorrect: line.startsWith("@"),
     }));
 
-  const [selected, setSelected] = useState(Array(lines.length).fill(false));
+  const [selected, setSelected] = useState([]);
+
+  useEffect(() => {
+    setSelected(Array(lines.length).fill(false));
+  }, [tosText]);
 
   const handleCheckboxChange = (index) => {
     const updatedSelected = [...selected];
@@ -37,13 +41,16 @@ function ToSScreen({ tosText, setWin }) {
         <div
           key={index}
           className={`
-            text-xs
-            my-1
-            p-2
-            hover:bg-yellow-100 ${selected[index] ? `bg-slate-300` : ""}`}
+            flex flex-row
+            text-sm my-1 p-2 hover:bg-yellow-100 ${
+              selected[index] ? `bg-slate-300` : ""
+            }`}
           onClick={() => handleCheckboxChange(index)}
         >
-          <label>
+          <span>→&nbsp;</span>
+          <label
+          // className="before:content-['•']"
+          >
             {/* <input
               type="checkbox"
               checked={selected[index]}
