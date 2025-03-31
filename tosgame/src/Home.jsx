@@ -25,9 +25,9 @@ function Home() {
         </button>
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded"
-          onClick={() => navigate("/new-screen")}
+          onClick={() => navigate("/nav-screen")}
         >
-          Go to New Screen
+          Start
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
