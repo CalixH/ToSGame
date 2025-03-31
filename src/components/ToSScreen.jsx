@@ -33,6 +33,10 @@ function ToSScreen({ tosText, setWin }) {
       (line, i) => line.isCorrect === updatedSelected[i]
     );
     setWin(allCorrect);
+
+    // Play sound on click
+    const clickSound = new Audio("/public/clicksoundeffect.mp3");
+    clickSound.play();
   };
 
   return (
