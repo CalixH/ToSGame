@@ -42,6 +42,15 @@ function CaseScreen() {
         setModalText(data);
         setModalVisible(true);
       });
+
+    // play sound if win/lose
+    if (win) {
+      const winSound = new Audio("/win.wav");
+      winSound.play();
+    } else {
+      const loseSound = new Audio("/BRUH.mp3");
+      loseSound.play();
+    }
   };
 
   const closeModal = () => {

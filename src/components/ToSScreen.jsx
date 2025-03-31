@@ -35,7 +35,7 @@ function ToSScreen({ tosText, setWin }) {
     setWin(allCorrect);
 
     // Play sound on click
-    const clickSound = new Audio("/public/clicksoundeffect.mp3");
+    const clickSound = new Audio("/clicksoundeffect.mp3");
     clickSound.play();
   };
 
