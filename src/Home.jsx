@@ -5,15 +5,12 @@ function Home() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center items-center">
+      <div className="min-h-screen flex flex-col gap-1 justify-center items-center">
         <h1 className="font-bold text-3xl">ToS Game</h1>
-        <button className="w-24" onClick={() => navigate("/nav-screen")}>
+        <button className="w-24" onClick={() => navigate("/cases")}>
           Start
         </button>
         <button onClick={() => navigate(`/case/tutorial`)}>Tutorial</button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
     </>
   );

@@ -81,7 +81,7 @@ function CaseScreen() {
             <div className="flex flex-row-reverse">
               <button
                 className="bg-blue-500 px-4 py-2 rounded flex flex-row-reverse"
-                onClick={() => navigate("/nav-screen")}
+                onClick={() => navigate("/cases")}
               >
                 Go to Cases
               </button>
