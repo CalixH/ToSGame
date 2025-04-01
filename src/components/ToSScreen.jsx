@@ -45,6 +45,7 @@ function ToSScreen({ tosText, setWin }) {
         <div
           key={index}
           className={`
+            font-mono
             flex flex-row
             text-sm my-1 p-2 hover:bg-yellow-100 ${
               selected[index] ? `bg-slate-300` : ""
