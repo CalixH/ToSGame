@@ -88,12 +88,7 @@ function CaseScreen() {
             </h2>
             <p className="mb-4 whitespace-pre-wrap">{modalText}</p>
             <div className="flex flex-row-reverse">
-              <button
-                className="bg-blue-500 px-4 py-2 rounded flex flex-row-reverse"
-                onClick={() => navigate("/cases")}
-              >
-                Go to Cases
-              </button>
+              <button onClick={() => navigate("/cases")}>Go to Cases</button>
             </div>
           </div>
         </div>
