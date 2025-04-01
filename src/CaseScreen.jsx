@@ -92,7 +92,7 @@ function CaseScreen() {
           return (
             <button
               key={caseName}
-              className={`!rounded-none flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
+              className={`!rounded-none emailButton flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
                 index > 0 ? "!border-0 !border-t !border-blue-400" : ""
               }`}
               onClick={() => navigate(`/case/${caseName}`)}
