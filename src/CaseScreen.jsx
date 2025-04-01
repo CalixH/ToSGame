@@ -83,7 +83,7 @@ function CaseScreen() {
       new Audio("/win.wav").play();
       setUnlockedCases((prev) => Math.min(prev + 1, caseNames.length)); // Unlock next case
     } else {
-      new Audio("/BRUH.mp3").play();
+      new Audio("/wrong.mp3").play();
     }
   };
 
@@ -185,7 +185,7 @@ function CaseScreen() {
           onClick={closeModal}
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg w-1/2"
+            className="bg-white p-6 rounded-lg shadow-lg w-1/2 max-h-7/8 overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-bold mb-4">
