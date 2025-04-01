@@ -58,6 +58,7 @@ function ToSScreen({ tosText, setWin, caseId }) {
             }`}
           onClick={() => handleCheckboxChange(index)}
         >
+          {/* Line number */}
           <span>→&nbsp;</span>
           <label
           // className="before:content-['•']"

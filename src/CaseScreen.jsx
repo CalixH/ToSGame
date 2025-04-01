@@ -25,6 +25,13 @@ function CaseScreen() {
   ]; // Corresponding titles
   const titleLetters = ["W", "HC", "MS", "⭐", "CS"]; // First letters of each title
 
+  const emailIcons = [
+    "/mail.png", // Example favicon URLs
+    "/send.png",
+    "/inbox.png",
+    "/delete.png",
+  ];
+
   const [showNextCaseButton, setShowNextCaseButton] = useState(false); // Track when to show the next case button
 
   useEffect(() => {
@@ -103,77 +110,103 @@ function CaseScreen() {
 
   return (
     <div className="flex h-screen p-4">
-      {/* Vertical button bar resembling emails */}
-      <div className="min-w-64 flex flex-col bg-gray-800 text-white rounded-tl-lg rounded-bl-lg">
-        {caseNames.slice(0, unlockedCases).map((caseName, index) => {
-          const firstLetter = titleLetters[index].toUpperCase(); // Use titleLetters instead
-          const isNew = !clickedCases[caseName]; // Check if the case is new
-
-          return (
-            <button
-              key={caseName}
-              className={`!rounded-none relative emailButton flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
-                index > 0 ? "!border-0 !border-t !border-blue-400" : ""
-              }`}
-              onClick={() => navigate(`/case/${caseName}`)}
-              style={{ visibility: showNextCaseButton ? "visible" : "hidden" }} // Hide button until delay is over
-            >
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-400 rounded-full text-white">
-                {firstLetter}
+      <div className="flex flex-col w-1/2">
+        {/* Email Inbox Bar */}
+        <div className="w-full bg-gray-800 text-white py-2 px-4 flex items-center gap-4 rounded-tl-lg">
+          <div className="flex justify-between items-center space-x-4 w-full px-25">
+            <div className="flex text-center text-lg font-semibold">Inbox</div>
+            {emailIcons.map((icon, index) => (
+              <div
+                key={index}
+                className="w-10 h-10 flex items-center justify-center"
+              >
+                <img
+                  src={icon}
+                  alt={`email-${index}`}
+                  className="w-8 h-8 rounded-full"
+                />
               </div>
-              <span className="flex-grow">{titles[index]}</span>
-              {isNew && (
-                <span className="w-3 h-3 !bg-red-500 !rounded-full !absolute !right-2 !top-2 !animate-ping"></span>
-              )}
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Main content */}
-      <div className="flex flex-grow space-x-4">
-        {/* Left side with text */}
-        <div className="w-1/2 bg-gray-300 p-6 rounded-tr-lg rounded-br-lg shadow-lg border border-gray-500 overflow-auto text-left">
-          <div className="image-box">
-            {hasProfileImage && (
-              <img
-                src={`/src/assets/profiles/${caseId}.png`}
-                alt="profileimage"
-                width={200}
-                height={200}
-                style={{ float: "right", margin: "5px" }}
-                onError={(e) => (e.target.style.display = "none")} // Hide image if not found
-                className="rounded-md"
-              />
-            )}
-          </div>
-
-          <div className="text-box">
-            <p className="whitespace-pre-wrap font-serif text-lg">
-              {displayText}
-            </p>
+            ))}
           </div>
         </div>
-        {/* Right side */}
-        <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg border border-gray-500 overflow-auto relative">
-          {/* Set the wallpaper image as the background only for the right side */}
-          <img
-            src="/toswallpaper.png"
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 object-top object-left"
-            alt="Background Animation"
-          />
-          <div className="relative z-10">
-            <ToSScreen tosText={tosText} setWin={setWin} caseId={caseId} />
-            <div className="flex flex-row-reverse">
-              {caseId && caseId !== "default" && (
-                <button
-                  onClick={handleSubmit}
-                  disabled={!caseId || caseId === "default"}
-                >
-                  Submit
-                </button>
-              )}
+        <div className="flex flex-row w-full h-full">
+          <div className="flex flex-row ">
+            {/* Vertical button bar resembling emails */}
+            <div className="min-w-64 flex flex-col bg-gray-800 text-white rounded-tl-lg rounded-bl-lg">
+              {caseNames.slice(0, unlockedCases).map((caseName, index) => {
+                const firstLetter = titleLetters[index].toUpperCase(); // Use titleLetters instead
+                const isNew = !clickedCases[caseName]; // Check if the case is new
+
+                return (
+                  <button
+                    key={caseName}
+                    className={`!rounded-none relative emailButton flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
+                      index > 0 ? "!border-0 !border-t !border-blue-400" : ""
+                    }`}
+                    onClick={() => navigate(`/case/${caseName}`)}
+                    style={{
+                      visibility: showNextCaseButton ? "visible" : "hidden",
+                    }} // Hide button until delay is over
+                  >
+                    <div className="w-8 h-8 flex items-center justify-center bg-gray-400 rounded-full text-white">
+                      {firstLetter}
+                    </div>
+                    <span className="flex-grow">{titles[index]}</span>
+                    {isNew && (
+                      <span className="w-3 h-3 !bg-red-500 !rounded-full !absolute !right-2 !top-2 !animate-ping"></span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
+          </div>
+
+          {/* Main content */}
+          <div className="flex space-x-4 w-full">
+            {/* Left side with text */}
+            <div className="w-full bg-gray-300 p-6 shadow-lg border border-gray-500 overflow-auto text-left">
+              <div className="image-box">
+                {hasProfileImage && (
+                  <img
+                    src={`/src/assets/profiles/${caseId}.png`}
+                    alt="profileimage"
+                    width={200}
+                    height={200}
+                    style={{ float: "right", margin: "5px" }}
+                    onError={(e) => (e.target.style.display = "none")} // Hide image if not found
+                    className="rounded-md"
+                  />
+                )}
+              </div>
+
+              <div className="text-box">
+                <p className="whitespace-pre-wrap font-serif text-lg">
+                  {displayText}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Right side */}
+      <div className="w-1/2 bg-white p-6 rounded-r-lg shadow-lg border border-gray-500 overflow-auto relative">
+        {/* Set the wallpaper image as the background only for the right side */}
+        <img
+          src="/toswallpaper.png"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 object-top object-left"
+          alt="Background Animation"
+        />
+        <div className="relative z-10">
+          <ToSScreen tosText={tosText} setWin={setWin} caseId={caseId} />
+          <div className="flex flex-row-reverse">
+            {caseId && caseId !== "default" && (
+              <button
+                onClick={handleSubmit}
+                disabled={!caseId || caseId === "default"}
+              >
+                Submit
+              </button>
+            )}
           </div>
         </div>
       </div>
