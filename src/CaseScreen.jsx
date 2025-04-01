@@ -14,14 +14,15 @@ function CaseScreen() {
   const [unlockedCases, setUnlockedCases] = useState(1);
   const [clickedCases, setClickedCases] = useState({});
 
-  const caseNames = ["casetutorial", "case6", "case7", "case8"]; // List of cases
+  const caseNames = ["casetutorial", "case6", "case7", "case1", "case8"]; // List of cases
   const titles = [
     "Welcome!",
     "RE: AT&T Hoax",
     "Bidder's Edge's Bots",
+    "BONUS: Is this real?",
     "I Must Play this Game...",
   ]; // Corresponding titles
-  const titleLetters = ["W", "HC", "MS", "CS"]; // First letters of each title
+  const titleLetters = ["W", "HC", "MS", "⭐", "CS"]; // First letters of each title
 
   const [showNextCaseButton, setShowNextCaseButton] = useState(false); // Track when to show the next case button
 
@@ -128,21 +129,31 @@ function CaseScreen() {
       <div className="flex flex-grow space-x-4">
         {/* Left side with text */}
         <div className="w-1/2 bg-gray-300 p-6 rounded-tr-lg rounded-br-lg shadow-lg border border-gray-500 overflow-auto text-left">
-          <p className="whitespace-pre-wrap font-serif text-lg">{displayText}</p>
+          <p className="whitespace-pre-wrap font-serif text-lg">
+            {displayText}
+          </p>
           <img src="/src/assets/profiles/profile1.png" alt="profileimage" />
         </div>
         {/* Right side */}
-        <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg border border-gray-500 overflow-auto">
-          <ToSScreen tosText={tosText} setWin={setWin} />
-          <div className="flex flex-row-reverse">
-            {caseId && caseId !== "default" && (
-              <button
-                onClick={handleSubmit}
-                disabled={!caseId || caseId === "default"}
-              >
-                Submit
-              </button>
-            )}
+        <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg border border-gray-500 overflow-auto relative">
+          {/* Set the wallpaper image as the background only for the right side */}
+          <img
+            src="/toswallpaper.png"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 object-top object-left"
+            alt="Background Animation"
+          />
+          <div className="relative z-10">
+            <ToSScreen tosText={tosText} setWin={setWin} caseId={caseId} />
+            <div className="flex flex-row-reverse">
+              {caseId && caseId !== "default" && (
+                <button
+                  onClick={handleSubmit}
+                  disabled={!caseId || caseId === "default"}
+                >
+                  Submit
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -150,7 +161,7 @@ function CaseScreen() {
       {/* Modal */}
       {modalVisible && (
         <div
-          className="fixed inset-0 bg-gray-500/90 transition-opacity flex justify-center items-center"
+          className="fixed inset-0 bg-gray-500/90 transition-opacity flex justify-center items-center z-10"
           onClick={closeModal}
         >
           <div

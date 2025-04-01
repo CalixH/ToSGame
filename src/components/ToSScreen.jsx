@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 // setWin is used to signal back to parent CaseScreen that all the correct text has been selected
 // and player has "won" solving the case
 //
-function ToSScreen({ tosText, setWin }) {
+function ToSScreen({ tosText, setWin, caseId }) {
   const lines = tosText
     .split("\n")
     .filter((line) => line.trim() !== "")
@@ -40,14 +40,20 @@ function ToSScreen({ tosText, setWin }) {
   };
 
   return (
-    <div>
+    <div className="font-mono">
+      <div className="flex justify-center">
+        <h1 className="text-2xl font-bold mb-4">
+          {caseId === "case1"
+            ? "What Should I Suggest?"
+            : "Terms of Service Snippets"}
+        </h1>
+      </div>
       {lines.map((line, index) => (
         <div
           key={index}
           className={`
-            font-mono
             flex flex-row
-            text-sm my-1 p-2 hover:bg-yellow-100 ${
+            text-sm my-1 p-2 ml-18 hover:bg-yellow-100 ${
               selected[index] ? `bg-slate-300` : ""
             }`}
           onClick={() => handleCheckboxChange(index)}

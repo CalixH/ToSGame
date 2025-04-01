@@ -1,15 +1,11 @@
-Hidden Terms Price (PC Pitstop, 2005)
+Hey,
 
-Source Agreement: cannot be found
+I just installed PC Pitstop and was going through their End User License Agreement when I found this clause that looked odd.
 
-What Happened? PC Pitstop, a software company, inserted a clause in their ToS stating that the first person to email them would receive $1,000. It took four months before someone finally claimed it.
+SPECIAL CONSIDERATION
 
-Outcome: winner won $1,000
+A special consideration which may include financial compensation will be awarded to a limited number of authorize licensee to read this section of the license agreement and contact PC Pitstop at consideration@pcpitstop.com. This offer can be withdrawn at any time.
 
-Reasoning: the contract explicitly stated the prize offer, making it legally enforceable
+Is this legally binding? I can't tell if it's a joke, or if they would steal my information if I email them...
 
-Evidence and Reasoning:
-
-The ToS clearly contained a clause stating the reward
-
-The company acknowledged that nobody read their ToS, proving their point
+Doug Heckman
