@@ -123,7 +123,8 @@ function CaseScreen() {
       <div className="flex flex-grow space-x-4">
         {/* Left side with text */}
         <div className="w-1/2 bg-gray-300 p-6 rounded-tr-lg rounded-br-lg shadow-lg border border-gray-500 overflow-auto text-left">
-          <p className="whitespace-pre-wrap font-mono text-lg">{displayText}</p>
+          <p className="whitespace-pre-wrap font-serif text-lg">{displayText}</p>
+          <img src="/src/assets/profiles/profile1.png" alt="profileimage" />
         </div>
         {/* Right side */}
         <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg border border-gray-500 overflow-auto">
