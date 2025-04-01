@@ -12,9 +12,10 @@ function CaseScreen() {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalText, setModalText] = useState("");
   const [unlockedCases, setUnlockedCases] = useState(1);
+  const [clickedCases, setClickedCases] = useState({});
 
-  const caseNames = ["casetutorial", "case6"]; // Populate this with your case names.
-  const titles = ["Welcome!", "RE: AT&T Hoax"]; // Corresponding titles for each case.
+  const caseNames = ["casetutorial", "case6"]; // List of cases
+  const titles = ["Welcome!", "RE: AT&T Hoax"]; // Corresponding titles
   const titleLetters = ["W", "HC"]; // First letters of each title
 
   const [showNextCaseButton, setShowNextCaseButton] = useState(false); // Track when to show the next case button
@@ -33,11 +34,17 @@ function CaseScreen() {
     fetch(`/src/assets/${caseId}tos.txt`)
       .then((response) => response.text())
       .then((data) => setTOSText(data));
+
+    // Mark case as clicked
+    if (!clickedCases[caseId]) {
+      const updatedClickedCases = { ...clickedCases, [caseId]: true };
+      setClickedCases(updatedClickedCases);
+      localStorage.setItem("clickedCases", JSON.stringify(updatedClickedCases));
+    }
   }, [caseId]);
 
   useEffect(() => {
     setDisplayText(""); // Reset text
-
     let index = 0;
     const interval = setInterval(() => {
       setDisplayText((prev) => {
@@ -86,13 +93,15 @@ function CaseScreen() {
   return (
     <div className="flex h-screen p-4">
       {/* Vertical button bar resembling emails */}
-      <div className="min-w-48 flex flex-col bg-gray-800 text-white rounded-tl-lg rounded-bl-lg">
+      <div className="min-w-64 flex flex-col bg-gray-800 text-white rounded-tl-lg rounded-bl-lg">
         {caseNames.slice(0, unlockedCases).map((caseName, index) => {
           const firstLetter = titleLetters[index].toUpperCase(); // Use titleLetters instead
+          const isNew = !clickedCases[caseName]; // Check if the case is new
+
           return (
             <button
               key={caseName}
-              className={`!rounded-none emailButton flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
+              className={`!rounded-none relative emailButton flex items-center space-x-2 p-2 bg-gray-500 hover:bg-gray-500 ${
                 index > 0 ? "!border-0 !border-t !border-blue-400" : ""
               }`}
               onClick={() => navigate(`/case/${caseName}`)}
@@ -102,6 +111,9 @@ function CaseScreen() {
                 {firstLetter}
               </div>
               <span className="flex-grow">{titles[index]}</span>
+              {isNew && (
+                <span className="w-3 h-3 !bg-red-500 !rounded-full !absolute !right-2 !top-2 !animate-ping"></span>
+              )}
             </button>
           );
         })}
