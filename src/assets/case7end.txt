@@ -1,0 +1,7 @@
+eBay argued that Bidder's Edge's use of bots was unauthorized and constituted a form of trespass to chattels, meaning that it interfered with eBay's property (its servers and data). eBay claimed that the bots were overloading their servers, which caused disruption to the site’s performance and increased operational costs.
+
+In response, Bidder's Edge argued that its actions were fair use, as it was simply aggregating publicly available information. However, the court sided with eBay, granting a preliminary injunction against Bidder's Edge. The court ruled that the bots violated eBay’s terms of service and caused harm to eBay’s business, noting that the use of automated tools to scrape the site could be considered illegal if it harmed the site’s operations.
+
+The court’s decision was significant because it set a precedent for the trespass to chattels doctrine in relation to unauthorized access and scraping of data, especially when it interferes with a website's functionality. The ruling also highlighted that terms of service agreements could be enforced in court, and unauthorized bot access could lead to legal consequences.
+
+The case did not go to trial, as Bidder's Edge eventually agreed to stop using bots to scrape eBay's site, but it had lasting implications for the way websites protect their data from scrapers and bots.

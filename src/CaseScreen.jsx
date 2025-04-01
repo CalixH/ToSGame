@@ -14,9 +14,14 @@ function CaseScreen() {
   const [unlockedCases, setUnlockedCases] = useState(1);
   const [clickedCases, setClickedCases] = useState({});
 
-  const caseNames = ["casetutorial", "case6"]; // List of cases
-  const titles = ["Welcome!", "RE: AT&T Hoax"]; // Corresponding titles
-  const titleLetters = ["W", "HC"]; // First letters of each title
+  const caseNames = ["casetutorial", "case6", "case7", "case8"]; // List of cases
+  const titles = [
+    "Welcome!",
+    "RE: AT&T Hoax",
+    "Bidder's Edge's Bots",
+    "I Must Play this Game...",
+  ]; // Corresponding titles
+  const titleLetters = ["W", "HC", "MS", "CS"]; // First letters of each title
 
   const [showNextCaseButton, setShowNextCaseButton] = useState(false); // Track when to show the next case button
 

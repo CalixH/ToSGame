@@ -1,0 +1,19 @@
+Here's what happened in reality:
+
+(I) Misrepresentation/Deceit; Plaintiff has not provided the requisite, who, what, when, and how necessary to establish an intentional misrepresentation claim, the Court dismisses Plaintiff's intentional misrepresentation claim with prejudice
+
+(II) Unfair and Deceptive Trade Practices; the Court finds that this claim fails for the same reasons as the Misrepresentation claim
+
+(III) Defamation/Libel/Slander; Plaintiff's claim for defamation is based upon negligence, Plaintiff's damages for such a claim are limited under the User Agreement
+
+(IV) Negligence;
+
+(V) Gross Negligence; the Court finds that Plaintiff has stated a claim for both negligence and gross negligence. Additionally, although Plaintiff's damages claim may be limited for the negligence claim, Plaintiff is not so limited with respect to the gross negligence claim
+
+(VI) Intentional Infliction of Emotional Distress;
+
+(VII) Negligent Infliction of Emotional Distress; If Plaintiff establishes an NIED claim solely based upon negligence, then damages will be limited by the User Agreement. If, however, Plaintiff can establish gross negligence, and Plaintiff's NIED claim is based on the gross negligence, then Plaintiff's damages will not be limited
+
+(VIII) Punitive Damages; Punitive damages, however, cannot form an independent claim and accordingly, the Court dismisses Count VIII
+
+For the foregoing reasons, the Court: (1) DENIES Defendants' motion to dismiss for lack of subject matter jurisdiction; (2) GRANTS in part and denies in part Defendants' Motion to Dismiss the Second Amended Complaint, and (3) DISMISSES Counts I (Misrepresentation/Deceit), II (Unfair and Deceptive Trade Practices), VI (Intentional Infliction of Emotional Distress) and VIII (Punitive Damages) of the Second Amended Complaint with prejudice. Counts III (Defamation/Libel/Slander), IV (Negligence), V (Gross Negligence), and VII  (Negligent Infliction of Emotional Distress) of the Second Amended Complaint remain viable

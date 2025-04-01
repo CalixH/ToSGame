@@ -1,0 +1,9 @@
+Hello,
+
+I’m Mark Scout from eBay. I am reaching out to discuss a potential legal matter concerning Bidder's Edge, a company that has been scraping our site and using bots to gather and display eBay auction data on their platform. As we’ve observed, these bots are negatively impacting our platform by overloading our servers, increasing our infrastructure costs, and providing unfair advantages to Bidder's Edge users who can make more informed decisions using our data.
+
+From what we’ve seen, their botting activities are causing a disturbance to eBay's operation and violating the terms of use for our site. The data they are scraping isn't publicly available through any other channel, and we believe that this unauthorized access may constitute an infringement on our intellectual property and a violation of eBay’s rights. However, I wanted to check in with you before taking any action.
+
+In your expert opinion, do we have grounds to file a lawsuit against Bidder's Edge for this botting activity? Are there legal precedents around unauthorized web scraping and bot-driven price aggregation that would support our case? What steps should we take to build a strong case and protect our platform from this kind of abuse?
+
+I’d greatly appreciate your insights and advice on how we can move forward.
