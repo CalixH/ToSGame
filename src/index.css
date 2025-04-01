@@ -37,7 +37,7 @@ button {
 }
 button:hover {
   border-color: #8aa9ff;
-  background-color: #2a2a2a;
+  background-color: #8d8d8d;
 }
 button:focus,
 button:focus-visible {
@@ -45,7 +45,7 @@ button:focus-visible {
 }
 
 .emailButton {
-  background-color: #808080; /* Grey background */
+  background-color: #313131; /* Grey background */
   color: white; /* White text */
   border-radius: 8px;
   border: 1px solid transparent;
@@ -58,31 +58,11 @@ button:focus-visible {
 }
 
 .emailButton:hover {
-  background-color: #666666; /* Darker grey on hover */
+  background-color: #2a2b46; /* Darker grey on hover */
   border-color: #8aa9ff; /* Blue border on hover */
 }
 
 .emailButton:focus,
 .emailButton:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a {
-    color: #646cff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-    color: #213547;
-  }
-  button:hover {
-    background-color: #e0e0e0;
-  }
 }
