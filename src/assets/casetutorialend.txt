@@ -1,0 +1,11 @@
+Here are the deceptive statements and why they can be harmful:
+
+"By using our service, you agree that we may collect, use, and sell your personal data—including financial and browsing history—to any third party we choose."
+🚩 Why it's deceptive: This grants the company unrestricted rights to sell sensitive data.
+
+"We may change these terms at any time without notifying you, and continued use of our service constitutes your acceptance of any changes."
+🚩 Why it's deceptive: Users could unknowingly agree to unfavorable terms without any warning.
+
+
+"You waive your right to participate in any class-action lawsuit or arbitration against us, regardless of any damages suffered."
+🚩 Why it's deceptive: This strips users of legal recourse, making it nearly impossible to challenge unfair practices.

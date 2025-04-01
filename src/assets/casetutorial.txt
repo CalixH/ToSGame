@@ -1,1 +1,9 @@
-Welcome to Terms of Service Lawyer Simulator 5000!
+Welcome to the Terms of Service Game!
+
+Your mission is to assist clients in navigating deceptive Terms of Service agreements and End User Licensing Agreements. You'll receive emails outlining their cases and objectives, much like this one.
+
+On the right panel, you'll find excerpts from the relevant Terms of Service or other contextual information. Your are required to select all pertinent clips and make a decision of how you want to proceed with each case.
+
+Since each case is based off real events, you'll receive feedback on your choices and learn what actually happened after submitting your decision.
+
+To begin, review the statements on the right and select those that seem intentionally deceptive.
