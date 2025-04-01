@@ -110,9 +110,11 @@ function CaseScreen() {
 
   return (
     <div className="flex h-screen p-4">
-      <div className="flex flex-col w-1/2">
-        {/* Email Inbox Bar */}
+      {/* Left side */}
+      <div className="flex flex-col w-1/2 overflow-auto">
+        {/* Left side Top-bottom split */}
         <div className="w-full bg-gray-800 text-white py-2 px-4 flex items-center gap-4 rounded-tl-lg">
+          {/* Email Inbox Bar */}
           <div className="flex justify-between items-center space-x-4 w-full px-25">
             <div className="flex text-center text-lg font-semibold">Inbox</div>
             {emailIcons.map((icon, index) => (
@@ -129,6 +131,7 @@ function CaseScreen() {
             ))}
           </div>
         </div>
+        {/* inbox-main split */}
         <div className="flex flex-row w-full h-full">
           <div className="flex flex-row ">
             {/* Vertical button bar resembling emails */}
