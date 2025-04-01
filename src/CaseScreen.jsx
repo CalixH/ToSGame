@@ -132,7 +132,7 @@ function CaseScreen() {
         <div className="flex flex-row w-full h-full">
           <div className="flex flex-row ">
             {/* Vertical button bar resembling emails */}
-            <div className="min-w-64 flex flex-col bg-gray-800 text-white rounded-tl-lg rounded-bl-lg">
+            <div className="min-w-64 flex flex-col bg-gray-800 text-white rounded-bl-lg">
               {caseNames.slice(0, unlockedCases).map((caseName, index) => {
                 const firstLetter = titleLetters[index].toUpperCase(); // Use titleLetters instead
                 const isNew = !clickedCases[caseName]; // Check if the case is new

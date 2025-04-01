@@ -34,7 +34,7 @@ function Home() {
         className="font-bold text-3xl text-white z-10"
         style={{ textShadow: "2px 2px 2px black" }}
       >
-        Terms of Service Warrior Simulator 2025
+        Terms of Service Lawyer Game
       </h1>
       <button
         className="w-24 z-10 bg-blue-500 py-2 px-6 rounded"
