@@ -13,6 +13,7 @@ function CaseScreen() {
   const [modalText, setModalText] = useState("");
   const [unlockedCases, setUnlockedCases] = useState(1);
   const [clickedCases, setClickedCases] = useState({});
+  const [hasProfileImage, setHasProfileImage] = useState(false);
 
   const caseNames = ["casetutorial", "case6", "case7", "case1", "case8"]; // List of cases
   const titles = [
@@ -65,6 +66,10 @@ function CaseScreen() {
 
     return () => clearInterval(interval);
   }, [text]);
+
+  useEffect(() => {
+    setHasProfileImage(caseId !== "casetutorial" && caseId !== "default");
+  }, [caseId]);
 
   const handleSubmit = () => {
     fetch(`/src/assets/${caseId}end.txt`)
@@ -129,10 +134,25 @@ function CaseScreen() {
       <div className="flex flex-grow space-x-4">
         {/* Left side with text */}
         <div className="w-1/2 bg-gray-300 p-6 rounded-tr-lg rounded-br-lg shadow-lg border border-gray-500 overflow-auto text-left">
-          <p className="whitespace-pre-wrap font-serif text-lg">
-            {displayText}
-          </p>
-          <img src="/src/assets/profiles/profile1.png" alt="profileimage" />
+          <div className="image-box">
+            {hasProfileImage && (
+              <img
+                src={`/src/assets/profiles/${caseId}.png`}
+                alt="profileimage"
+                width={200}
+                height={200}
+                style={{ float: "right", margin: "5px" }}
+                onError={(e) => (e.target.style.display = "none")} // Hide image if not found
+                className="rounded-md"
+              />
+            )}
+          </div>
+
+          <div className="text-box">
+            <p className="whitespace-pre-wrap font-serif text-lg">
+              {displayText}
+            </p>
+          </div>
         </div>
         {/* Right side */}
         <div className="w-1/2 bg-white p-6 rounded-lg shadow-lg border border-gray-500 overflow-auto relative">
